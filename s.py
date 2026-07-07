@@ -23,7 +23,7 @@ doctors_available_for_each_dept={
 print("Doctors available for each department:", doctors_available_for_each_dept)
 
 # function for patient details plus if else for doctor name based on department
-def patient_details(name, age, gender, department, doctor):
+def patient_details(name, age, gender, department):
     if department== "Cardiology":
        print("doctor=Dr. Smith")
     elif department== "Neurology":
@@ -34,11 +34,11 @@ def patient_details(name, age, gender, department, doctor):
        print("doctor=Dr. Davis")
     elif department== "Oncology":
        print("doctor=Dr. Patel")
-patient_details("John Doe", 45, "Male", "Cardiology", "Dr. Smith")
-patient_details("Bob Johnson", 60, "Male", "Neurology", "Dr. Williams")
-patient_details("Charlie Brown", 35, "Male", "Orthopedics", "Dr. Jones")
-patient_details("Eve Garcia", 5, "Female", "Pediatrics", "Dr. Davis")   
-patient_details("Frank Lee", 50, "Male", "Oncology", "Dr. Patel")   
+patient_details("John Doe", 45, "Male", "Cardiology", )
+patient_details("Bob Johnson", 60, "Male", "Neurology", )
+patient_details("Charlie Brown", 35, "Male", "Orthopedics", )
+patient_details("Eve Garcia", 5, "Female", "Pediatrics", )   
+patient_details("Frank Lee", 50, "Male", "Oncology",)   
 
 # set
 patients_in_each_dept = {
@@ -60,7 +60,8 @@ room=1
 while room<=5:
     amount=int(input("Enter the amount "))
     if amount>=200:
-         print("Seat Booked @",room)
+         print("room Booked @",room)
+         room=room+1
     else:
         print("Unable to book seat")
         
@@ -160,7 +161,7 @@ print('doctors name:', m.get_name())
 print('department:', m.get_department())
 print('shift timings:', m.get_shift_timings())
 
-# polymorphisim overloading
+# polymorphisim overloading 
 class room:
     def Add(self,a):
         print(a)
@@ -169,6 +170,7 @@ class room:
     def Add(self,a,b,c):
         print(a+b+c)
 s=room()
+print('the total amt for room maintance')
 s.Add(10,20,30)
 
 
